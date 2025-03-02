@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "XNGBl89lS6DNpNldTrIHOcy+kBiw+7lfuKeRj18EzPU=",
+  "Source": "FormsApp.Api",
+  "BasePath": "_content/FormsApp.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
