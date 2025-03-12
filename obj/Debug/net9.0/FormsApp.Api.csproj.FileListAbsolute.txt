@@ -168,4 +168,5 @@ C:\Users\kiril\OneDrive\Рабочий стол\проекты\C# projects\Forms
 C:\Users\kiril\OneDrive\Рабочий стол\проекты\C# projects\FormsApp\FormsApp.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\kiril\OneDrive\Рабочий стол\проекты\C# projects\FormsApp\FormsApp.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\kiril\OneDrive\Рабочий стол\проекты\C# projects\FormsApp\FormsApp.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\kiril\OneDrive\Рабочий стол\проекты\C# projects\FormsApp\FormsApp.Api\obj\Debug\net9.0\FormsApp.Api.sourcelink.json
 C:\Users\kiril\OneDrive\Рабочий стол\проекты\C# projects\FormsApp\FormsApp.Api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

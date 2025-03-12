@@ -29,7 +29,8 @@ namespace FormsApp.Api.Controllers
             {
                 Email = request.Email,
                 Username = request.Username,
-                PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password)
+                PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password),
+                Role = "User" 
             };
 
             _context.Users.Add(user);

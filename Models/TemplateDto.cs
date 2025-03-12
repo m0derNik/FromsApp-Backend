@@ -8,6 +8,7 @@
         public bool IsPublic { get; set; }
         public int UserId { get; set; }
         public List<QuestionDto>? Questions { get; set; }
+        public double AverageRating { get; set; } // Средний рейтинг
     }
 
     public class QuestionDto

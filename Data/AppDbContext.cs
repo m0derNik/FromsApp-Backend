@@ -12,5 +12,6 @@ namespace FormsApp.Api.Data
         public DbSet<Question> Questions { get; set; }
         public DbSet<Form> Forms { get; set; }
         public DbSet<Answer> Answers { get; set; }
+        public DbSet<Rating> Ratings { get; set; }
     }
 }

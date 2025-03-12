@@ -4,6 +4,7 @@ using FormsApp.Api.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FormsApp.Api.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250303165120_AddFormsToTemplate")]
+    partial class AddFormsToTemplate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -99,32 +102,6 @@ namespace FormsApp.Api.Data.Migrations
                     b.HasIndex("TemplateId");
 
                     b.ToTable("Questions");
-                });
-
-            modelBuilder.Entity("FormsApp.Api.Models.Rating", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("TemplateId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Value")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("TemplateId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Ratings");
                 });
 
             modelBuilder.Entity("FormsApp.Api.Models.Template", b =>
@@ -228,25 +205,6 @@ namespace FormsApp.Api.Data.Migrations
                     b.Navigation("Template");
                 });
 
-            modelBuilder.Entity("FormsApp.Api.Models.Rating", b =>
-                {
-                    b.HasOne("FormsApp.Api.Models.Template", "Template")
-                        .WithMany("Ratings")
-                        .HasForeignKey("TemplateId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("FormsApp.Api.Models.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Template");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("FormsApp.Api.Models.Template", b =>
                 {
                     b.HasOne("FormsApp.Api.Models.User", "User")
@@ -268,8 +226,6 @@ namespace FormsApp.Api.Data.Migrations
                     b.Navigation("Forms");
 
                     b.Navigation("Questions");
-
-                    b.Navigation("Ratings");
                 });
 #pragma warning restore 612, 618
         }
